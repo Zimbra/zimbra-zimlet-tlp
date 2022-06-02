@@ -1,0 +1,12 @@
+{
+      "zimbra-zimlet-tlp": {
+            "menuItem": "Add TLP-designation",
+            "tlpHelpLink": "https://www.cisa.gov/tlp",
+            "tlpDescription": "TLP is a set of designations used to ensure that sensitive information is shared with the appropriate audience. It employs four colors to indicate expected sharing boundaries to be applied by the recipient(s). For more information see:",
+            "modalText": "Select a TLP designation for this email:",
+            "redDescription": "[TLP:RED] Personal for named recipients only",
+            "amberDescription": "[TLP:AMBER] Organisation limited",
+            "greenDescription": "[TLP:GREEN] Community wide",
+            "whiteDescription": "[TLP:WHITE] Disclosure is not limited"
+      }
+}
