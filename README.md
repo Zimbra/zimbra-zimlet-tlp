@@ -6,10 +6,10 @@ By using TLP you can set a confidentiality designation on an email similar to th
 
 For more information on TLP protocol see:
 
-- https://www.cisa.gov/tlp
-- https://www.first.org/tlp/
+- [https://www.cisa.gov/tlp](https://www.cisa.gov/tlp)
+- [https://www.first.org/tlp](https://www.first.org/tlp)
 
-There is also a Thunderbird add-on that does the same: https://addons.thunderbird.net/en-US/thunderbird/addon/tulpe/?src=search
+There is also a Thunderbird add-on that does the same: [https://addons.thunderbird.net/en-US/thunderbird/addon/tulpe/?src=search](https://addons.thunderbird.net/en-US/thunderbird/addon/tulpe/?src=search)
 
 ## Screenshots
 
