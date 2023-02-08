@@ -1,12 +1,17 @@
 {
-      "zimbra-zimlet-tlp": {
-            "menuItem": "Add TLP-designation",
-            "tlpHelpLink": "https://www.cisa.gov/tlp",
-            "tlpDescription": "TLP is a set of designations used to ensure that sensitive information is shared with the appropriate audience. It employs four colors to indicate expected sharing boundaries to be applied by the recipient(s). For more information see:",
-            "modalText": "Select a TLP designation for this email:",
-            "redDescription": "[TLP:RED] Personal for named recipients only",
-            "amberDescription": "[TLP:AMBER] Organisation limited",
-            "greenDescription": "[TLP:GREEN] Community wide",
-            "whiteDescription": "[TLP:WHITE] Disclosure is not limited"
-      }
+	"zimbra-zimlet-tlp": {
+		"menuItem": "Add TLP-designation",
+		"tlpHelpLink": "https://www.cisa.gov/tlp",
+		"tlpDescription": "TLP is a set of designations used to ensure that sensitive information is shared with the appropriate audience. It employs four colors to indicate expected sharing boundaries to be applied by the recipient(s). For more information see:",
+		"modalText": "Select a TLP designation for this email:",
+		"redDescription": "[TLP:RED] Personal for named recipients only",
+		"amberDescription": "[TLP:AMBER] On need-to-know basis within organization and clients",
+		"amberStrictDescription": "[TLP:AMBER+STRICT] Organisation limited",
+		"greenDescription": "[TLP:GREEN] Community wide",
+		"clearDescription": "[TLP:CLEAR] Disclosure is not limited"
+},
+	"zimlet": {
+		"description": "First.org Traffic Light Protocol (TLP) sending options",
+		"label": "Traffic Light Protocol 2.0 Zimlet"
+	}
 }

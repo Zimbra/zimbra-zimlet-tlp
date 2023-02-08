@@ -1,6 +1,6 @@
-# Traffic Light Protocol (TLP) Zimlet
+# Traffic Light Protocol 2.0 (TLP) Zimlet
 
-The Traffic Light Protocol (TLP) Zimlet adds a menu to Zimbra Modern UI that allows the use of First.org Traffic Light Protocol (TLP) confidentiality designations.
+The Traffic Light Protocol (TLP) Zimlet adds a menu to Zimbra Modern UI that allows the use of First.org Traffic Light Protocol (TLP) confidentiality designations. This Zimlet has been updated for Traffic Light Protocol version 2.0.
 
 By using TLP you can set a confidentiality designation on an email similar to the functionality offered by the [Confidential Header Zimlet](https://github.com/Zimbra/confidential-header-zimlet). Benefits of the TLP approach is that it works on any email client as TLP tags are added to the body and subject of an email and it does not use email headers.
 
@@ -13,6 +13,6 @@ There is also a Thunderbird add-on that does the same: [https://addons.thunderbi
 
 ## Screenshots
 
-> ![](screenshots/menu.png)
-> ![](screenshots/dialog.png)
-> ![](screenshots/result.png)
+![](screenshots/menu.png)
+![](screenshots/dialog.png)
+![](screenshots/result.png)

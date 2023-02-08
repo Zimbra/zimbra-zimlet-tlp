@@ -4,7 +4,6 @@ import { ModalDialog } from '@zimbra-client/components';
 import style from './style';
 
 const TLPModal = ({ onClose, onAction, context, zimletStrings, props }) => {
-   console.log(props);
    return (
       <ModalDialog
          title={zimletStrings.menuItem}
@@ -14,10 +13,11 @@ const TLPModal = ({ onClose, onAction, context, zimletStrings, props }) => {
          actionLabel="buttons.ok"
       >
          <p>{zimletStrings.tlpDescription} <span style='color:blue; text-decoration:underline; cursor:pointer' onClick={e => handleLinkClick(zimletStrings.tlpHelpLink)}>{zimletStrings.tlpHelpLink}</span>.<br /><hr />{zimletStrings.modalText}<br /><br />
-            <div onClick={e => setTLP([props, "[TLP:RED]", zimletStrings])} className={style.tlpButton} style="color: #ff0033; background: #000">{zimletStrings.redDescription}</div><br />
+            <div onClick={e => setTLP([props, "[TLP:RED]", zimletStrings])} className={style.tlpButton} style="color: #FF2B2B; background: #000">{zimletStrings.redDescription}</div><br />
             <div onClick={e => setTLP([props, "[TLP:AMBER]", zimletStrings])} className={style.tlpButton} style="color: #ffc000; background: #000">{zimletStrings.amberDescription}</div><br />
+            <div onClick={e => setTLP([props, "[TLP:AMBER+STRICT]", zimletStrings])} className={style.tlpButton} style="color: #ffc000; background: #000">{zimletStrings.amberStrictDescription}</div><br />
             <div onClick={e => setTLP([props, "[TLP:GREEN]", zimletStrings])} className={style.tlpButton} style="color: #3f0; background: #000">{zimletStrings.greenDescription}</div><br />
-            <div onClick={e => setTLP([props, "[TLP:WHITE]", zimletStrings])} className={style.tlpButton} style="color: #fff; background: #000">{zimletStrings.whiteDescription}</div><br />
+            <div onClick={e => setTLP([props, "[TLP:CLEAR]", zimletStrings])} className={style.tlpButton} style="color: #fff; background: #000">{zimletStrings.clearDescription}</div><br />
          </p>
       </ModalDialog>
    );
@@ -32,11 +32,11 @@ function setTLP(args) {
    const TLPDesignation = args[1];
    const zimletStrings = args[2];
 
-   const subjectRegex = /\[TLP:RED\]\s|\[TLP:AMBER\]\s|\[TLP:GREEN\]\s/gm
+   const subjectRegex = /\[TLP:RED\]\s|\[TLP:AMBER\]\s|\[TLP:AMBER\+STRICT\]\s|\[TLP:GREEN\]\s/gm
    let subject = props.getSubject();
    subject = subject.replaceAll(subjectRegex, "");
 
-   if (TLPDesignation == "[TLP:WHITE]") {
+   if (TLPDesignation == "[TLP:CLEAR]") {
       props.setSubject(subject);
    }
    else {
@@ -49,15 +49,18 @@ function setTLP(args) {
    
    switch (TLPDesignation) {
       case "[TLP:RED]":
-         window.parent.tinyMCE.activeEditor.setContent("<span style='color: #ff0033; background: #000; padding:3px;'>" + zimletStrings.redDescription + "</span>" + content);
+         window.parent.tinyMCE.activeEditor.setContent("<span style='color: #FF2B2B; background: #000; padding:3px;'>" + zimletStrings.redDescription + "</span>" + content);
          break;
       case "[TLP:AMBER]":
          window.parent.tinyMCE.activeEditor.setContent("<span style='color: #ffc000; background: #000; padding:3px;'>" + zimletStrings.amberDescription + "</span>" + content);
          break;
+      case "[TLP:AMBER+STRICT]":
+         window.parent.tinyMCE.activeEditor.setContent("<span style='color: #ffc000; background: #000; padding:3px;'>" + zimletStrings.amberStrictDescription + "</span>" + content);
+         break;
       case "[TLP:GREEN]":
          window.parent.tinyMCE.activeEditor.setContent("<span style='color: #3f0; background: #000; padding:3px;'>" + zimletStrings.greenDescription + "</span>" + content);
          break;
-      case "[TLP:WHITE]":
+      case "[TLP:CLEAR]":
          window.parent.tinyMCE.activeEditor.setContent(content);
          break;
    }
